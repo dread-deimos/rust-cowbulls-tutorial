@@ -1,0 +1,7 @@
+[package]
+name = "cowbull"
+version = "0.1.0"
+authors = ["dread"]
+
+[dependencies]
+rand = "0.3.0"
