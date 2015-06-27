@@ -15,7 +15,23 @@ This tutorial doesn't build the code line by line, but rather explains it using 
 ## Structure
 The source code consists of two Rust files and Cargo configuration. The main file ``src/main.rs`` governs the logic of application. The game file ``src/game/mod.rs`` is a module that encapsulates the game logic. Follow through them in that order to pass the tutorial.
 
-## The game
+## Build and run
+
+First, you need to install Rust, if you don't have it yet. Follow [official instructions](http://www.rust-lang.org/install.html).
+
+By default, you'll have [Cargo](https://crates.io/) (package manager for Rust) installed. If not, follow [official instructions](https://crates.io/install).
+
+To build and run this tutorial you have to either clone it from [github repository](https://github.com/dread-deimos/rust-cowbulls-tutorial.git), or download and unzip it manually (use Download ZIP button). I recommend to use Git.
+
+```
+git clone https://github.com/dread-deimos/rust-cowbulls-tutorial.git
+cd rust-cowbulls-tutorial
+cargo run
+```
+
+This sequence will clone the repository, download dependencies, build and run the code.
+
+## The Game
 Before we start, I'll tell about the game that is being implenented here. I believe it has many
 names accross the globe, but to me it was known as "Cows and Bulls" since my school days when
 we've played the game between the classes with my friends.
@@ -57,22 +73,6 @@ the user to play as a player two.
 
 We'll also implement a simple tool to assist player with the collected data, which will help us
 to undestand a bit more about a game logic.
-
-## Build and run
-
-First, you need to install Rust, if you don't have it yet. Follow [official instructions](http://www.rust-lang.org/install.html).
-
-By default, you'll have [Cargo](https://crates.io/)(package manager for Rust) installed. If not, follow [official instructions](https://crates.io/install).
-
-To build and run this tutorial you have to either clone it from [github repository](https://github.com/dread-deimos/rust-cowbulls-tutorial.git), or download and unzip it manually (use Download ZIP button). I recommend to use Git.
-
-```
-git clone https://github.com/dread-deimos/rust-cowbulls-tutorial.git
-cd rust-cowbulls-tutorial
-cargo run
-```
-
-This sequence will clone the repository, download dependencies, build and run the code.
 
 ## Disclaimer
 I am not an experienced Rust developer and have written this tutorial mostly to familiarize with the Rust itself.
