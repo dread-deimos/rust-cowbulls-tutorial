@@ -30,7 +30,9 @@ fn main() {
         print!("{} > ", the_game.tries);
 
         // Flush buffer so the decoration will be printed immedeately without line buffering.
-        // Note, that this will fail if you don't include std::io::Write trait.
+        // Note, that this will fail if you don't include std::io::Write trait. Also, we assign
+        // the result of this operation to a placeholder to avoid "Unused result" warning which
+        // will appear because flush() expects to return a Result value.
         let _ = stdout().flush();
 
         // Read from STDIN to our buffer variable. read_line() method returns a Result object so
