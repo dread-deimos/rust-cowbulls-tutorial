@@ -7,7 +7,7 @@ It is a next little step after official documentation "Learn Rust" tutorials.
 In this tutorial we implement the game known to me as "Cows and Bulls" and described below.
 
 ## Target audience
-This tutorial is aimed at noobs like me, that have finished a few tutorials from official 
+This tutorial is aimed at noobs like me, that have finished a few tutorials from official
 documentation and were thinking on what to do next.
 
 This tutorial doesn't build the code line by line, but rather explains it using comments.
@@ -55,7 +55,21 @@ the user to play as a player two.
 We'll also implement a simple tool to assist player with the collected data, which will help us
 to undestand a bit more about a game logic.
 
-# Disclaimer
+## Build and run
+
+First, you need to install Rust, if you don't have it yet. Follow [official instructions](http://www.rust-lang.org/install.html).
+
+By default, you'll have [Cargo](https://crates.io/)(package manager for Rust) installed. If not, follow [official instructions](https://crates.io/install).
+
+To build and run this tutorial you have to either clone it from [github repository](https://github.com/dread-deimos/rust-cowbulls-tutorial.git), or download and unzip it manually (use Download ZIP button). I recommend to use Git.
+
+`` ~$ git clone https://github.com/dread-deimos/rust-cowbulls-tutorial.git ``
+`` ~$ cd rust-cowbulls-tutorial ``
+`` ~$ cargo run ``
+
+This sequence will clone the repository, download dependencies, build and run the code.
+
+## Disclaimer
 I am not an experienced Rust developer and have written this tutorial mostly to familiarize with the Rust itself.
 
 This tutorial doesn't cover two important branches of development: documentation and testing.
