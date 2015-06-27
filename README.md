@@ -63,9 +63,11 @@ By default, you'll have [Cargo](https://crates.io/)(package manager for Rust) in
 
 To build and run this tutorial you have to either clone it from [github repository](https://github.com/dread-deimos/rust-cowbulls-tutorial.git), or download and unzip it manually (use Download ZIP button). I recommend to use Git.
 
-`` ~$ git clone https://github.com/dread-deimos/rust-cowbulls-tutorial.git ``
-`` ~$ cd rust-cowbulls-tutorial ``
-`` ~$ cargo run ``
+```
+git clone https://github.com/dread-deimos/rust-cowbulls-tutorial.git
+cd rust-cowbulls-tutorial
+cargo run
+```
 
 This sequence will clone the repository, download dependencies, build and run the code.
 
