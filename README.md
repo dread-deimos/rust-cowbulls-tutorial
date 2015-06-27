@@ -3,14 +3,17 @@ A simple entry-level tutorial for Rust (v1.1.0)
 
 ## Description
 This is a simple tutorial for Rust language, written for rustc version 1.1.0.
-It is a next little step after official documentation "Learn Rust" tutorials.
+It is a next little step after [official documentation](https://doc.rust-lang.org/stable/book/) "Learn Rust" tutorials.
 In this tutorial we implement the game known to me as "Cows and Bulls" and described below.
 
 ## Target audience
-This tutorial is aimed at noobs like me, that have finished a few tutorials from official
-documentation and were thinking on what to do next.
+This tutorial is aimed at noobs like me, that have finished a few tutorials from [official
+documentation](https://doc.rust-lang.org/stable/book/) and were thinking on what to do next.
 
 This tutorial doesn't build the code line by line, but rather explains it using comments.
+
+## Structure
+The source code consists of two Rust files and Cargo configuration. The main file ``src/main.rs`` governs the logic of application. The game file ``src/game/mod.rs`` is a module that encapsulates the game logic. Follow through them in that order to pass the tutorial.
 
 ## The game
 Before we start, I'll tell about the game that is being implenented here. I believe it has many
