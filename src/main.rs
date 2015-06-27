@@ -1,37 +1,6 @@
 /*
-    Before we start, I'll tell about the game that is being implenented here. I believe it has many
-    names accross the globe, but to me it was known as "Cows and Bulls" since my school days when
-    we've played the game between the classes with my friends.
-
-    This game is for two players. One player has a passive role. He makes up a secret four-digit
-    number (digits must be unique and the number can start with zero) and writes it down somewhere
-    safe from gazes of the player two.
-
-    Then player two makes guesses on what this number could be and player one looks up the number
-    and counts the "cows" and "bulls", where "cows" is number of digits that player two guessed
-    right, but they are not on right positions in the original secret number. The "bulls" is number
-    of digits that are at their right place in the secret number. Player one doesn't tell which
-    digits are "cows" and "bulls".
-
-    For example, the secret number is 6437 and player two calls his guess:
-    P2> 1234.
-    P1> You've got one bull and one cow.
-    P2> 1290.
-    P1> There's nobody here.
-    P2> 7364.
-    P1> It's 4 cows, wow!
-    P2> 6437.
-    P1> Bingo! You've guessed it!
-
-    The challenge of the game for player two is guess the secret number in the smallest amount of
-    attempts. The pencil and a piece of paper usually helps to store collected data and analyze it
-    to lower attempts count to minimum.
-
-    In this game, which we program in Rust (v1.1.0) below, we let the computer be player one and
-    the user to play as a player two.
-
-    We'll also implement a simple tool to assist player with the collected data, which will help us
-    to undestand a bit more about a game logic.
+    Copyright 2015 Andrei "dread.deimos" Arsenin
+    See LICENSE file for legal stuff
 */
 
 // Import STDIN and STDOUT handle generators for input and output respectively.
@@ -52,9 +21,9 @@ fn main() {
     // Just print an invitation line using a println! macros
     println!("Guess the number! (Enter 'q' to quit', 'h' for help)");
 
-	loop {
+    loop {
         // We'll need an empty String object to feed it to IO object as buffer
-		let mut input = String::new();
+        let mut input = String::new();
 
         // Print prompt decoration. We want an imput invitation that displays how many tries have
         // been used so far to guess the secret number
@@ -66,14 +35,14 @@ fn main() {
 
         // Read from STDIN to our buffer variable. read_line() method returns a Result object so
         // we need to handle it's success and fail status.
-    	stdin().read_line(&mut input)
-			.ok()
-			.expect("Failed to read input");
+        stdin().read_line(&mut input)
+            .ok()
+            .expect("Failed to read input");
 
         // Trim string. Note that trim() method will return &str type, not String. But we don't
         // need the String type any further because we don't want this value to be borrowed.
         // We use "let" to redefine this binding with new type.
-		let input = input.trim();
+        let input = input.trim();
 
         // Now we attempt to parse the input string to a u32 integer. On success, we have a number
         // and will check if matches our secret number. On fail, we assume that user have entered
@@ -95,9 +64,9 @@ fn main() {
             // value, print the win message with a number of tries needed to guess the right answer
             // and break the loop so game will end.
             Ok(_) if the_game.guess(input) => {
-    			println!("You won in {} tries!", the_game.tries + 1);
+                println!("You won in {} tries!", the_game.tries + 1);
                 break;
-    		},
+            },
 
             // If the input number was correct, but didn't match the secret value, we'll analyze it
             // and print the number of "cows" (digit exists, but doesn't match position) and
@@ -131,7 +100,7 @@ fn main() {
                 // Here we define a pattern that matches one of these strings for a command that
                 // quits the game. The break operator will end the game loop and since there's
                 // nothing after this loop, the application will close returning user to shell.
-    			"q" | "quit" | "exit" => break,
+                "q" | "quit" | "exit" => break,
 
                 // We'll want to show user a list of available commands, so we call the
                 // print_help() function which will handle this for us.
@@ -155,10 +124,10 @@ fn main() {
 
                 // In case of any other input, we just print a message that we didn't get what user
                 // wanted and hint him to use help command.
-    			_  => println!("Unknown command: \"{}\". Enter 'h' for help", input),
+                _  => println!("Unknown command: \"{}\". Enter 'h' for help", input),
             },
         };
-	}
+    }
 }
 
 // This function just prints out the list of available game commands
